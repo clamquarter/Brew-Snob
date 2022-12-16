@@ -7,15 +7,26 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+ @State var tea = false
+    @State var coffee = true
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    
+                VStack{
+//                    Text("BrewSnob").font(.title)
+                    Image("lightModeLogo").resizable().aspectRatio( contentMode: .fit).padding()
+                    TabView {
+                        BrewSelectionView(brewSelection: $tea).tabItem {
+                          Label("Tea", systemImage: "cup.and.saucer")
+                        }
+                        BrewSelectionView(brewSelection: $coffee).tabItem {
+                            Label("Coffee", systemImage: "mug")
+                        }
+                    
+                }
         }
-        .padding()
     }
 }
 
