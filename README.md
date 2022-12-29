@@ -1,5 +1,6 @@
 # BrewSnob
 
+<h3>Summary</h3>
 BrewSnob is an app I'm working on for a personal challenge at the Apple Developer Academy. It's a simple app for people who brew coffee or tea at home. It handles water : beans/tea ratios, measurement conversions, and timing. For this challenge, we were tasked with coming up with a presentation over the course of 3 weeks. 
 
 
