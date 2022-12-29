@@ -22,3 +22,6 @@ BrewSnob is an app I'm working on for a personal challenge at the Apple Develope
 <li>Show the user's last chosen beverage by default.</li>
 <li>Add a "post brew" quiz to gather data for the "tips" section.</li>
 </ul>
+
+<h2>Versions</h2>
+Version 1.0 || BrewSnob displays the suggested water:brew ratio, a timer, and allows switching from Imperial to Metric.
