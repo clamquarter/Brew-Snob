@@ -15,6 +15,7 @@
 		13457B4A293FEEB9002D518E /* WaterInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13457B49293FEEB9002D518E /* WaterInputView.swift */; };
 		13457B4E293FF04E002D518E /* CoffeeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13457B4D293FF04E002D518E /* CoffeeInputView.swift */; };
 		134BB15729E19A4900DE55BB /* BrewSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134BB15629E19A4900DE55BB /* BrewSelectionViewModel.swift */; };
+		134BB15D29E202B200DE55BB /* BrewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134BB15C29E202B200DE55BB /* BrewListView.swift */; };
 		135F66F0294D0044000A1DD9 /* RatioCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F66EF294D0044000A1DD9 /* RatioCalculatorView.swift */; };
 		135F66F3294D0818000A1DD9 /* LemonMilklight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 135F66F2294D0818000A1DD9 /* LemonMilklight.otf */; };
 		139D88AB2949010500083133 /* BrewSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139D88AA2949010500083133 /* BrewSelectionView.swift */; };
@@ -32,6 +33,7 @@
 		13457B49293FEEB9002D518E /* WaterInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterInputView.swift; sourceTree = "<group>"; };
 		13457B4D293FF04E002D518E /* CoffeeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeInputView.swift; sourceTree = "<group>"; };
 		134BB15629E19A4900DE55BB /* BrewSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewSelectionViewModel.swift; sourceTree = "<group>"; };
+		134BB15C29E202B200DE55BB /* BrewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewListView.swift; sourceTree = "<group>"; };
 		135F66EF294D0044000A1DD9 /* RatioCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioCalculatorView.swift; sourceTree = "<group>"; };
 		135F66F2294D0818000A1DD9 /* LemonMilklight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LemonMilklight.otf; sourceTree = "<group>"; };
 		139D88AA2949010500083133 /* BrewSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewSelectionView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				135F66EF294D0044000A1DD9 /* RatioCalculatorView.swift */,
 				13457B47293FEDDA002D518E /* TimerView.swift */,
 				13457B49293FEEB9002D518E /* WaterInputView.swift */,
+				134BB15C29E202B200DE55BB /* BrewListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134BB15D29E202B200DE55BB /* BrewListView.swift in Sources */,
 				13457B48293FEDDA002D518E /* TimerView.swift in Sources */,
 				134BB15729E19A4900DE55BB /* BrewSelectionViewModel.swift in Sources */,
 				13457B4A293FEEB9002D518E /* WaterInputView.swift in Sources */,

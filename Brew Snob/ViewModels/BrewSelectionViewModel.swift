@@ -11,9 +11,9 @@ class BrewSelectionViewModel: ObservableObject {
     
 var beverages: [BrewMethod] {
     if brewSelection {
-        return coffees
-    } else {
         return teas
+    } else {
+        return coffees
     }
 }
 }

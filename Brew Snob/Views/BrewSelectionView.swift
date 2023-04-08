@@ -8,34 +8,31 @@ import SwiftUI
 
 
 struct BrewSelectionView: View {
-    @ObservedObject var viewModel = BrewSelectionViewModel()
-    //this is passed in from the Content view. true is coffee, false is tea.
-    @Binding var brewSelection: Bool
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    @State private var selection: BrewType?
 
-    var body: some View {
-        NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(viewModel.beverages) { beverage in
-                        NavigationLink(destination: BrewingView(brewTime: beverage.time)) {
-                            VStack {
-                                Image(beverage.image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .clipShape(Rectangle())
-                                    .cornerRadius(20)
-                                    .padding()
-                                    .shadow(color: .black, radius: 7, x: 7, y: 7)
-                                Text(beverage.name)
-                                    .font(Font.custom("Fonts/LemonMilklight", size: 24))
-                                    .foregroundColor(.black)
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    enum BrewType {
+        case tea, coffee
     }
 
+    var body: some View {
+        NavigationView {
+            VStack {
+                Spacer()
+                NavigationLink(destination: BrewListView(type: .tea), tag: .tea, selection: $selection) {
+                    Text("Teas")
+                        .foregroundColor(.black)
+                        .font(Font.custom("Fonts/LemonMilklight", size: 24))
+                }
+                Spacer()
+                NavigationLink(destination: BrewListView(type: .coffee), tag: .coffee, selection: $selection) {
+                    Text("Coffees")
+                        .foregroundColor(.black)
+                        .font(Font.custom("Fonts/LemonMilklight", size: 24))
+                }
+                Spacer()
+            }
+            .navigationTitle("Select a Brew")
+        }
+    }
 }

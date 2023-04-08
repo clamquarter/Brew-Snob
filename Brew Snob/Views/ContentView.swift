@@ -9,26 +9,40 @@ import SwiftUI
 
 
 struct ContentView: View {
- @State var tea = false
-    @State var coffee = true
+    @State private var showBrewSelection = false
+    @State private var brewSelection: Bool = true // true is coffee, false is tea
     
     var body: some View {
-    
-                VStack{
-//                    Text("BrewSnob").font(.title)
-                    Image("lightModeLogo").resizable().aspectRatio( contentMode: .fit).padding()
-                    TabView {
-                        BrewSelectionView(brewSelection: $tea).tabItem {
-                          Label("Tea", systemImage: "cup.and.saucer")
+        NavigationView {
+            VStack {
+                if showBrewSelection {
+                    BrewSelectionView()
+                } else {
+                    VStack{
+                        Text("Welcome to Brew Snob!")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .padding(.bottom, 20)
+                        
+                        Button(action: {
+                            showBrewSelection = true
+                        }) {
+                            Text("Select your brew")
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.blue)
+                                .cornerRadius(10)
                         }
-                        BrewSelectionView(brewSelection: $coffee).tabItem {
-                            Label("Coffee", systemImage: "mug")
-                        }
-                    
+                    }
                 }
+            }
+            .navigationTitle("Brew Snob")
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
