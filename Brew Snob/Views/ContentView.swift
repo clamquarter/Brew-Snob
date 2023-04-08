@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct ContentView: View {
+    @ObservedObject var viewModel: BrewSelectionViewModel
+
     @State private var showBrewSelection = false
     @State private var brewSelection: Bool = true // true is coffee, false is tea
     
@@ -16,7 +18,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 if showBrewSelection {
-                    BrewSelectionView()
+                    BrewSelectionView(viewModel: viewModel)
                 } else {
                     VStack{
                         Text("Welcome to Brew Snob!")
@@ -46,6 +48,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: BrewSelectionViewModel())
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct Brew_SnobApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: BrewSelectionViewModel())
         }
     }
 }

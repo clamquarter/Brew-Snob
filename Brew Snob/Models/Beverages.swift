@@ -10,7 +10,7 @@ import SwiftUI
 
 //the struct CoffeeMethod will be the basis for all coffee brewing instructions. i chose struct so that each instance could remain independent. water temp
 
-struct BrewMethod: Identifiable {
+struct BrewMethod: Identifiable, Hashable {
     let name: String
     let image: String
     let waterTemp: Int //water temp will be Celsius by default and later converted for Imperial system losers. *ahem, users.

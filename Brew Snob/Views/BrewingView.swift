@@ -10,11 +10,13 @@ import SwiftUI
 //the brewing view is the screen the user will use when brewing, and will pull data based on the method selected by the user. a timer, the coffee/tea : water ratio, and some tips will display.
 
 struct BrewingView: View {
+    @ObservedObject var viewModel: BrewSelectionViewModel
     //brew time is the time in seconds, to be passed in based on user selection
     var brewTime: Int
     
     var body: some View {
         VStack{
+            RatioCalculatorView(beverages: viewModel.beverages)
             TimerView(initialTime: brewTime, timeRemaining: brewTime)
         }
     }
