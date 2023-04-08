@@ -17,7 +17,7 @@ struct BrewingView: View {
     var body: some View {
         VStack{
             RatioCalculatorView(beverages: viewModel.beverages)
-            TimerView(initialTime: brewTime, timeRemaining: brewTime)
+            TimerView(timeRemaining: brewTime, initialTime: brewTime)
         }
     }
 }
