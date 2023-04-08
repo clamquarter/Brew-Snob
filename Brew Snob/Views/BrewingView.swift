@@ -11,11 +11,11 @@ import SwiftUI
 
 struct BrewingView: View {
     //brew time is the time in seconds, to be passed in based on user selection
-    var brewTime = 640
+    var brewTime: Int
     
     var body: some View {
         VStack{
-            TimerView(timeRemaining: brewTime)
+            TimerView(initialTime: brewTime, timeRemaining: brewTime)
         }
     }
 }
